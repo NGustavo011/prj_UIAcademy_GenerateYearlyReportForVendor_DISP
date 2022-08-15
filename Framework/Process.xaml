@@ -98,12 +98,8 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_FilterWIDatatable workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System1\System1_FilterWIDatatable.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Type">
-          <Literal x:TypeArguments="x:String">WI4</Literal>
-        </InArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_Datatable">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="var_dtWI" />
-        </InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Type">WI4</InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_Datatable">[var_dtWI]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_AddQueueItems workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="System1\System1_AddQueueItems.xaml">
@@ -112,10 +108,10 @@
           <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="var_dtWI" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;in_OrchestratorQueueName&quot;).ToString" />
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;OrchestratorQueueName&quot;).ToString" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;in_OrchestratorQueueFolder&quot;).ToString" />
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
